@@ -3,41 +3,29 @@
 
 
 class TTTMechanics {
-public:
+private:
+    char board[9];
+    char currentplayerid;
 
+
+public:
     TTTMechanics();
 
-    void RestartGamePhase();
+    void resetgamefunction();
+    void showboard() const;
 
-    char GetPlayerLive() const;
+    char getplayer() const;
+    char retrievecell(int ind) const;
 
-    bool MoveUnit(int cellrange);
+    bool move(int pos);
+    bool checkifcelltaken(int pos) const;
 
-    bool WinnerGotten() const;
+    bool winnerofgame() const;
 
-    char EquipWinner() const;
+    bool draw() const;
 
+    void switchcurrentplayer();
 
-    bool Draw() const;
-
-
-    bool DoneGame() const;
-
-
-    std::string BoardString() const;
-
-
-private:
-
-    char boardgrid[9];
-
-    char presentplayer;
-
-    char victoriousplayer;
-
-    void WinnerStatusLive();
-
-    bool CellGone(int indx) const;
 
 
 
