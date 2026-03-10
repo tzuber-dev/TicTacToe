@@ -22,7 +22,7 @@ public:
 
     bool winnerofgame() const;
 
-    bool draw1() const;
+    bool draw() const;
 
     void switchcurrentplayer();
 

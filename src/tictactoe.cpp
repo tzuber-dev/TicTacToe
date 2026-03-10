@@ -119,7 +119,7 @@ bool TTTMechanics::winnerofgame() const {
   return false;
 }
 
-bool TTTMechanics::draw1() const {
+bool TTTMechanics::draw() const {
     if (winnerofgame()) {
         return false;
     }
