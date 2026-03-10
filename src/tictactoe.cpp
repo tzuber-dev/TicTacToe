@@ -54,7 +54,7 @@ bool TTTMechanics::checkifcelltaken(int pos) const {
     if (pos < 1 || pos > 9) {
         return true;
     }
-    if (board[pos-1] =='X' || board[pos-1] =='0') {
+    if (board[pos-1] =='X' || board[pos-1] =='O') {
         return true;
     }
     return false;
@@ -114,12 +114,12 @@ bool TTTMechanics::winnerofgame() const {
     if (board[2] == board[4] && board[4]==board[6]) {
         return true;
 
-        return false;
-    }
 
+    }
+  return false;
 }
 
-bool TTTMechanics::draw() const {
+bool TTTMechanics::draw1() const {
     if (winnerofgame()) {
         return false;
     }
