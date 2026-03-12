@@ -6,13 +6,13 @@ using namespace std;
 
 
 TTTMechanics::TTTMechanics() {
-    resetgamefunction();
+    resetgame();
 }
 
 
 
 
-void TTTMechanics::resetgamefunction() {
+void TTTMechanics::resetgame() {
     board[0] = '1';
     board[1] = '2';
     board[2] = '3';
@@ -61,7 +61,7 @@ bool TTTMechanics::checkifcelltaken(int pos) const {
 }
 
 
-bool TTTMechanics::move(int pos) {
+bool TTTMechanics::makemove(int pos) {
     if (pos < 1 || pos > 9) {
         return false;
     }

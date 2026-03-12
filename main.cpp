@@ -42,7 +42,7 @@ int main() {
     while (playonemoretime) {
 
         tictactoe.showboard();
-        tictactoe.resetgamefunction();
+        tictactoe.resetgame();
 
 
         while (true){
@@ -51,7 +51,7 @@ int main() {
 
             //if (invalidinput)
             int usermove = inputuserfield[0] - '0';
-            if (!tictactoe.move(usermove)) {
+            if (!tictactoe.makemove(usermove)) {
                 std::cout<<"Invalid move from the user. Cell taken or not in range. Reattempt \n";
                 continue;
             }

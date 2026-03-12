@@ -11,13 +11,13 @@ private:
 public:
     TTTMechanics();
 
-    void resetgamefunction();
+    void resetgame();
     void showboard() const;
 
     char getplayer() const;
     char retrievecell(int ind) const;
 
-    bool move(int pos);
+    bool makemove(int pos);
     bool checkifcelltaken(int pos) const;
 
     bool winnerofgame() const;
