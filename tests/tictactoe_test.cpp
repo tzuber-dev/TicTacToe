@@ -10,6 +10,13 @@ TEST_CASE( "First player (x) begins" ) {
     REQUIRE(tictactoe.getplayer() == 'X' );
 }
 
+TEST_CASE("Good move reshapes the board") {
+    TTTMechanics tictactoe;
+    REQUIRE(tictactoe.makemove(1) == true);
+    REQUIRE(tictactoe.retrievecell(0)== 'X');
+
+}
+
 TEST_CASE( "After game restarts, the numbers and board restores successfully" ) {
     TTTMechanics tictactoe;
     tictactoe.makemove(1);
@@ -29,12 +36,7 @@ TEST_CASE( "After game restarts, the numbers and board restores successfully" ) 
     REQUIRE(tictactoe.retrievecell(8)=='9');
 }
 
-TEST_CASE("Good move reshapes the board") {
-    TTTMechanics tictactoe;
-    REQUIRE(tictactoe.makemove(1) == true);
-    REQUIRE(tictactoe.retrievecell(0)== 'X');
 
-}
 
 TEST_CASE("Once a cell is used, the user sees an error if reattempting to place their mark on it") {
     TTTMechanics tictactoe;
